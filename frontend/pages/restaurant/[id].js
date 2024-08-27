@@ -53,7 +53,7 @@ function DishCard({ data }) {
           height={300}
           width={300}
           src={`${process.env.STRAPI_URL || "https://capstone82624.onrender.com"}${
-            data.attributes.image.data.attributes.url
+            data.attributes.image?.data?.attributes?.url ?? ""
           }`}
           alt=""
         />
