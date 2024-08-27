@@ -5,7 +5,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "https://capstone82624.onrender.com",
+        hostname: "capstone82624.onrender.com",
         port: "1337",
         pathname: "/uploads/**",
       },
