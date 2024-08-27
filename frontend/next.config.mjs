@@ -1,16 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "capstone82624.onrender.com",
-        port: "1337",
-        pathname: "/uploads/**",
-      },
-    ],
-  },
+	reactStrictMode: true,
+	swcMinify: true,
 };
 
-export default nextConfig;
+module.exports = {
+	env: {
+		STRAPI_URL: process.env.STRAPI_URL,
+	},
+};
