@@ -34,7 +34,7 @@ function RestaurantCard({ data }) {
           height={300}
           width={300}
           srcset={`${process.env.STRAPI_URL || "https://capstone82624.onrender.com"}${
-            data.attributes.image?.data?.attributes?.url ?? ""
+             data.attributes.image.data[0]?.attributes?.url || ""
           }`}
           alt=""
         />
