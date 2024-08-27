@@ -53,10 +53,10 @@ function DishCard({ data }) {
           height={300}
           width={300}
           src={`${process.env.STRAPI_URL || "https://capstone82624.onrender.com"}${
-            data.attributes.image?.data?.attributes?.url ?? ""
+             data.attributes.image.data[0]?.attributes?.url || ""
           }`}
           alt=""
-        />
+          />
         <div className="p-8">
           <div className="group inline-block mb-4" href="#">
             <h3 className="font-heading text-xl text-gray-900 hover:text-gray-700 group-hover:underline font-black">
